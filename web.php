@@ -58,3 +58,21 @@ Route::get('/foods/create', [FoodController::class, 'create'])->name('foods.crea
 // Route xử lý lưu dữ liệu
 Route::post('/foods/store', [FoodController::class, 'store'])->name('foods.store');
 Route::get('/foods/{id}', [App\Http\Controllers\FoodController::class, 'show'])->name('foods.show');
+
+
+/*
+|--------------------------------------------------------------------------
+| Web bán hàng 
+|--------------------------------------------------------------------------
+*/
+//route xem giao diện bán hàng
+Route::get('index',function(){
+    return view('banhang.index');
+});
+
+Route::get('product-detail',function(){
+    return view('banhang.product-detail');
+});
+Route::get('checkout',function(){
+    return view('banhang.checkout');
+});
